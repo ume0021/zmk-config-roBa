@@ -19,7 +19,6 @@
     //         <&kp LEFT_ARROW>,
     //         <&kp UP_ARROW>,
     //         <&kp DOWN_ARROW>;
-
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -91,13 +90,13 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &kp I    &kp O    &lt 5 P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 LANG_HANJA             &lt 2 SPACE  &lt 3 LANG_HANGEUL                 &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 5 P
+&kp A             &kp S         &kp D         &kp F             &kp G        &kp LS(LG(S))           &kp EXCLAMATION  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp ESCAPE              &kp COLON        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANG_HANJA  &lt 2 SPACE  &lt 1 LANG_HANGEUL      &kp BACKSPACE    &lt 1 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_1 {
@@ -120,13 +119,13 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE      &trans                  &kp LG(LS(UP_ARROW))    &trans                   &trans                           &trans    &trans          &kp UP_ARROW    &trans           &trans
-&kp ESCAPE      &kp LG(LS(LEFT_ARROW))  &kp LG(LS(DOWN_ARROW))  &kp LG(LS(RIGHT_ARROW))  &trans       &trans      &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
-&kp LEFT_SHIFT  &trans                  &trans                  &kp LC(LS(TAB))          &kp LC(TAB)  &trans      &trans  &trans    &trans          &trans          &trans           &trans
-&trans          &trans                  &trans                  &trans                   &trans       &trans      &trans  &trans                                                     &trans
+&trans          &trans                  &kp LG(LS(UP_ARROW))    &trans                   &trans                                   &trans    &trans          &kp UP_ARROW    &trans           &trans
+&trans          &kp LG(LS(LEFT_ARROW))  &kp LG(LS(DOWN_ARROW))  &kp LG(LS(RIGHT_ARROW))  &trans               &trans      &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
+&kp LEFT_SHIFT  &kp LC(LS(TAB))         &kp LC(TAB)             &kp LG(LEFT_ARROW)       &kp LG(RIGHT_ARROW)  &trans      &trans  &trans    &trans          &trans          &trans           &trans
+&trans          &trans                  &trans                  &trans                   &trans               &trans      &trans  &trans                                                     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         MOUSE {
