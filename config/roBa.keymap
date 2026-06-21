@@ -30,12 +30,6 @@
     // };
 };
 
-&mmv {
-    // 自動でマウスレイヤーに切り替わっている間、カーソルの最大速度や加速にメリハリをつけます
-    acceleration-exponential-factor = <3>; // 値を大きくすると「じわっと動かした時」と「素早く動かした時」の差が激しくなります
-    time-to-max-speed-ms = <300>;          // 最高速度に達するまでの時間
-};
-
 &mkp_input_listener { 
     input-processors = <&zip_temp_layer 4 250>;
 };
