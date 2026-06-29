@@ -30,9 +30,7 @@
     // };
 };
 
-&mkp_input_listener { 
-    input-processors = <&zip_temp_layer 4 250>;
-};
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 250>; };
 
 / {
     combos {
@@ -104,8 +102,8 @@
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>; // 追加: スクロールのタップ時間を設定 (20ms)
-
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+ // 追加: スクロールのタップ時間を設定 (20ms)
             tap-ms = <20>;
         };
 
@@ -155,10 +153,10 @@
 
         layer_2 {
             bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                                                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS   &kp ASTERISK
-&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp LC(LA(KP_NUMBER_0))      &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &kp SLASH
-&kp F11  &kp F12  &trans  &trans  &trans   &trans                       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp DOT
-&trans   &trans   &trans  &trans  &trans   &trans                       &trans           &trans                                                        &trans
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                                &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS   &kp ASTERISK
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans      &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &kp SLASH
+&kp F11  &kp F12  &trans  &trans  &trans   &trans      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp DOT
+&trans   &trans   &trans  &trans  &trans   &trans      &trans           &trans                                                        &trans
             >;
         };
 
@@ -193,10 +191,10 @@
 
         layer_6 {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans                               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans          &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &kp LA(F4)      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
